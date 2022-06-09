@@ -95,7 +95,7 @@ def test_geotiff_save(tmpdir):
     image = TiffImage(file_path)
     new_tiff = str(tmpdir / 'test.tiff')
 
-    image.save(new_tiff)
+    image.save(new_tiff) # test
 
     check_same(file_path, new_tiff)
 

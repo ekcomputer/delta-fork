@@ -363,6 +363,7 @@ class _TiffWriter:
             self._handle.SetGeoTransform(metadata['geotransform'])
             self._handle.SetMetadata    (metadata['metadata'    ])
             self._handle.SetGCPs        (metadata['gcps'], metadata['gcpproj'])
+            self._handle.FlushCache() # close file/buffer
 
     def __del__(self):
         self.close()
